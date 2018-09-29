@@ -1,0 +1,118 @@
+{
+    "MQTTPacket": [], 
+    "activation": [], 
+    "alicrypto": [], 
+    "armv7m": [], 
+    "atparser": [], 
+    "atsame54": [
+        "platform/arch/arm/armv7m", 
+        "libc", 
+        "rhino", 
+        "hal", 
+        "modules.fs.kv", 
+        "vfs", 
+        "digest_algorithm", 
+        "platform/arch/arm/armv7m", 
+        "libc", 
+        "rhino", 
+        "hal", 
+        "modules.fs.kv", 
+        "vfs", 
+        "digest_algorithm"
+    ], 
+    "auto_component": [], 
+    "base64": [], 
+    "board_atsame54-xpro": [
+        "sal", 
+        "sal"
+    ], 
+    "cjson": [], 
+    "cli": [
+        "hal"
+    ], 
+    "device_sal_mk3060": [
+        "yloop", 
+        "sal", 
+        "atparser"
+    ], 
+    "digest_algorithm": [], 
+    "download_http": [
+        "fota.download.http.socket"
+    ], 
+    "fota": [
+        "fota.platform", 
+        "fota.download", 
+        "digest_algorithm", 
+        "cjson"
+    ], 
+    "fota_download": [
+        "fota.download.http"
+    ], 
+    "fota_mqtt_transport": [
+        "activation"
+    ], 
+    "fota_platform": [
+        "fota.platform.mqtt"
+    ], 
+    "fota_socket": [
+        "fota.download.http.socket.stand"
+    ], 
+    "framework": [], 
+    "hal": [], 
+    "iotkit": [
+        "mbedtls", 
+        "digest_algorithm", 
+        "cjson", 
+        "base64", 
+        "log", 
+        "modules.fs.kv", 
+        "hal", 
+        "mbedtls"
+    ], 
+    "kernel_init": [], 
+    "kv": [
+        "log"
+    ], 
+    "log": [], 
+    "mbedtls": [
+        "alicrypto"
+    ], 
+    "mqtt": [
+        "connectivity.mqtt.MQTTPacket", 
+        "protocol.linkkit.iotkit", 
+        "mbedtls"
+    ], 
+    "mqttapp": [
+        "cli", 
+        "protocol.linkkit.iotkit", 
+        "connectivity.mqtt", 
+        "cjson", 
+        "fota", 
+        "netmgr", 
+        "framework.common"
+    ], 
+    "netmgr": [
+        "modules.fs.kv", 
+        "yloop", 
+        "hal"
+    ], 
+    "newlib_stub": [], 
+    "rhino": [
+        "rhino"
+    ], 
+    "sal": [
+        "sal.wifi.mk3060"
+    ], 
+    "socket_stand": [], 
+    "vcall": [
+        "rhino"
+    ], 
+    "vfs": [
+        "kernel.vfs.device"
+    ], 
+    "vfs_device": [], 
+    "yloop": [
+        "log", 
+        "vfs"
+    ]
+}

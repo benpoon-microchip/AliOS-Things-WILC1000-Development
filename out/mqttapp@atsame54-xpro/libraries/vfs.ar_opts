@@ -1,0 +1,1 @@
+out/mqttapp@atsame54-xpro/Modules/kernel/vfs/device.o out/mqttapp@atsame54-xpro/Modules/kernel/vfs/select.o out/mqttapp@atsame54-xpro/Modules/kernel/vfs/vfs.o out/mqttapp@atsame54-xpro/Modules/kernel/vfs/vfs_file.o out/mqttapp@atsame54-xpro/Modules/kernel/vfs/vfs_inode.o out/mqttapp@atsame54-xpro/Modules/kernel/vfs/vfs_register.o  

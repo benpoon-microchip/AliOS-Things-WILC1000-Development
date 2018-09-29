@@ -1,0 +1,24 @@
+{
+    "aliosStudio.inner.yosBin": "aos",
+    "aliosStudio.hardware.board": "atsame54-xpro",
+    "aliosStudio.name": "mqttapp",
+    "aliosStudio.buildList": [
+        {
+            "name": "clean"
+        },
+        {
+            "name": "helloworld@starterkit"
+        },
+        {
+            "name": "starterkitgui@starterkit"
+        },
+        {
+            "name": "mqttapp@starterkit"
+        }
+    ],
+    "aliosStudio.build.multiBin": false,
+    "aliosStudio.build.multiBinTarget": "app",
+    "aliosStudio.flashAllBin": false,
+    "aliosStudio.isAosSource": true,
+    "aliosStudio.sdkPath": "${workspaceRoot}"
+}

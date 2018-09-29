@@ -1,0 +1,72 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "alios-studio: Make",
+      "type": "shell",
+      "command": "aos",
+      "args": [
+        "make",
+        "mqttapp@atsame54-xpro"
+      ],
+      "presentation": {
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "alios-studio: Upload",
+      "type": "shell",
+      "command": "C:/Program Files (x86)/Atmel/Studio/7.0/atbackend/atprogram.exe",
+      "args": [
+        "--tool",
+        "mqttapp@atsame54-xpro",
+        "--interface",
+        "SWD",
+        "--device",
+        "ATSAME54P20A",
+        "program",
+        "-f",
+        "${workspaceRoot}/out/helloworld@atsame54-xpro/binary/helloworld@atsame54-xpro.elf"
+      ],
+      "presentation": {
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "alios-studio: Serial Monitor",
+      "type": "shell",
+      "command": "aos",
+      "args": [
+        "monitor",
+        "",
+        ""
+      ],
+      "presentation": {
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "alios-studio: Clean",
+      "type": "shell",
+      "command": "aos",
+      "args": [
+        "make",
+        "clean"
+      ],
+      "presentation": {
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "alios-studio: List Devices",
+      "type": "shell",
+      "command": "aos",
+      "args": [
+        "devices"
+      ],
+      "presentation": {
+        "panel": "dedicated"
+      }
+    }
+  ]
+}
