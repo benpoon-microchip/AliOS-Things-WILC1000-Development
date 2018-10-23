@@ -53,13 +53,9 @@
  #include <os/include/m2m_wifi_ex.h>
 #include <os/include/net_init.h>
 
-//#include <FreeRTOS.h>
-//#include <queue.h>
-//#include <semphr.h>
-//#include <portmacro.h>
 
 #include <aos/kernel.h>
-extern debug_tcp;
+//extern debug_tcp;
 
 
 void wilc_netif_tx_from_queue(hif_msg_t *msg);
@@ -153,8 +149,8 @@ static err_t wilc_netif_tx(struct netif *netif, struct pbuf *p)
 		msg.pbuf = (void *) p;
 		msg.payload_size = p->len - ETH_PAD_SIZE - M2M_ETHERNET_HDR_OFFSET;
 		msg.payload = p->payload;
-		if (debug_tcp)
-			LOG("[wilc_netif_tx] msg.payload_size=%d, pbuf=%p\r\n",msg.payload_size, p);
+		//if (debug_tcp)
+		//	LOG("[wilc_netif_tx] msg.payload_size=%d, pbuf=%p\r\n",msg.payload_size, p);
 	} else {
 		for (q = p; q != NULL; q = q->next) {
 			memcpy(bufptr, q->payload, q->len);
@@ -168,8 +164,8 @@ static err_t wilc_netif_tx(struct netif *netif, struct pbuf *p)
 	if (msg.pbuf)
 		pbuf_ref(p);
 		
-	if (debug_tcp)
-		print_data((uint8*)(msg.payload), msg.payload_size+36+2);
+	//if (debug_tcp)
+	//	print_data((uint8*)(msg.payload), msg.payload_size+36+2);
 
 	ret = aos_queue_send(&hif_queue, &msg, sizeof(msg));
 	if (ret != 0)
