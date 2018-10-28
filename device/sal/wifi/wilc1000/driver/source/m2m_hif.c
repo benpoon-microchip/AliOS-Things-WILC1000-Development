@@ -92,6 +92,7 @@ static void isr(void)
 	gu8Interrupt++;
 #ifdef NM_LEVEL_INTERRUPT
 	nm_bsp_interrupt_ctrl(0);
+	DRIVER_SIGNAL_ISR();
 #else
 
 	DRIVER_SIGNAL_ISR();
@@ -571,6 +572,7 @@ static sint8 hif_isr(void)
 				}
 				if(M2M_REQ_GRP_WIFI == pstrHif->u8Gid)
 				{
+					//printf("hif receive, opcode=%d\r\n", pstrHif->u8Opcode);
 					if(pfWifiCb)
 						pfWifiCb(pstrHif->u8Opcode,pstrHif->u16Length - M2M_HIF_HDR_OFFSET, strHifInitParam.pu8RcvBuff + M2M_HIF_HDR_OFFSET);
 					
