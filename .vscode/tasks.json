@@ -7,7 +7,7 @@
       "command": "aos",
       "args": [
         "make",
-        "mqttapp@atsame54-xpro"
+        "helloworld@developerkit"
       ],
       "presentation": {
         "panel": "dedicated"
@@ -16,17 +16,10 @@
     {
       "label": "alios-studio: Upload",
       "type": "shell",
-      "command": "C:/Program Files (x86)/Atmel/Studio/7.0/atbackend/atprogram.exe",
+      "command": "aos",
       "args": [
-        "--tool",
-        "mqttapp@atsame54-xpro",
-        "--interface",
-        "SWD",
-        "--device",
-        "ATSAME54P20A",
-        "program",
-        "-f",
-        "${workspaceRoot}/out/helloworld@atsame54-xpro/binary/helloworld@atsame54-xpro.elf"
+        "upload",
+        "helloworld@developerkit"
       ],
       "presentation": {
         "panel": "dedicated"
